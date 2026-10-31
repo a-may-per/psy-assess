@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+# Keep demo/dist/project.config.json for WeChat project metadata; ignore generated bundles.
+demo/dist/*
+!demo/dist/project.config.json
+demo/dist-h5/
+
+# Tool caches and local metadata
+.cache/
+.swc/
+*.log
+.DS_Store
+
+# Local environment files
+.env
+.env.*
+!.env.example

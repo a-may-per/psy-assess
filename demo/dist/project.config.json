@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "./",
+  "compileType": "miniprogram",
+  "projectname": "psy-assess-demo",
+  "appid": "touristappid",
+  "setting": {
+    "es6": false,
+    "postcss": false,
+    "minified": false,
+    "urlCheck": true
+  },
+  "libVersion": "latest"
+}

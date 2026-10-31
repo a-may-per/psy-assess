@@ -1,0 +1,15 @@
+{
+  "miniprogramRoot": "demo/dist/",
+  "projectname": "psy-assess-demo",
+  "description": "关系·雷达 双人关系画像小程序",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}

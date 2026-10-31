@@ -5,6 +5,7 @@
   "description": "psy-assess dual-person radar quiz demo",
   "scripts": {
     "dev:web": "taro build --type h5 --watch",
+    "dev:weapp": "taro build --type weapp --watch",
     "build:web": "taro build --type h5",
     "build:weapp": "taro build --type weapp",
     "typecheck": "tsc -p tsconfig.json --noEmit",

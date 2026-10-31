@@ -5,6 +5,7 @@
   "description": "关系·雷达 — 双人五维性格与关系画像小程序",
   "scripts": {
     "dev:web": "npm --prefix demo run dev:web",
+    "dev:weapp": "npm --prefix demo run dev:weapp",
     "build:web": "npm --prefix demo run build:web",
     "build:weapp": "npm --prefix demo run build:weapp",
     "typecheck": "npm --prefix demo run typecheck",

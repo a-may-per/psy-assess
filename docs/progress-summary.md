@@ -72,7 +72,7 @@
 
 已具备：
 
-- **跨端高清雷达图组件**（[RadarChart.tsx](file:///Users/fdf/Github/psy-assess/demo/src/components/RadarChart.tsx)）：修复原内联 `<svg>` 在微信小程序 WXML 下无法渲染的问题，采用 Data URI 矢量渲染，支持单人五维图与双人同维叠加图。
+- **跨端高清雷达图组件**（[RadarChart.tsx](../demo/src/components/RadarChart.tsx)）：修复原内联 `<svg>` 在微信小程序 WXML 下无法渲染的问题，采用 Data URI 矢量渲染，支持单人五维图与双人同维叠加图。
 - **15 题盲测与精修题库**（[quizData.ts](file:///Users/fdf/Github/psy-assess/demo/src/data/quizData.ts)）：5 维度 3 轮交错排列、固定排列矩阵 `PERMS` 打散选项、全程盲测不暴露维度。
 - **完整个人画像与 8 大关系画像引擎**（[matchingEngine.ts](file:///Users/fdf/Github/psy-assess/demo/src/data/matchingEngine.ts)）：
   - 个人画像：5 主维度原型 +「收放自如的平衡漫游者」+「自在松弛的随风漫游者」兜底，含五维正反极性标签与场景化拆解。

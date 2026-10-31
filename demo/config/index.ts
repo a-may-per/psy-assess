@@ -15,6 +15,9 @@ export default defineConfig({
     publicPath: '/',
     staticDirectory: 'static',
     template: 'src/templates/index.html',
+    devServer: {
+      hot: false
+    },
     webpackChain(chain: any) {
       chain.performance.maxEntrypointSize(512000).maxAssetSize(512000)
     }

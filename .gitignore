@@ -2,6 +2,7 @@
 node_modules/
 .swc/
 dist/
+dist-h5/
 build/
 .next/
 .env

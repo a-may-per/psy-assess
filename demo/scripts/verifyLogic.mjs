@@ -308,4 +308,20 @@ check('模拟全链路埋点并校验完成率、首次分享率、B 完成率�
   assert.equal(analytics.getAnalyticsEvents().length, 0)
 })
 
+check('校验 Taro 4 H5 入口模板 src/index.html 与构建产物完整性（防白屏回归）', () => {
+  const srcHtmlPath = path.join(srcDir, 'index.html')
+  assert.ok(fs.existsSync(srcHtmlPath), 'Taro 4 H5 必须在 src/index.html 提供入口模板，否则 HtmlWebpackPlugin 不会生成 index.html')
+  const srcHtml = fs.readFileSync(srcHtmlPath, 'utf8')
+  assert.ok(srcHtml.includes('<div id="app"></div>'), 'src/index.html 必须包含 <div id="app"></div> 挂载节点')
+  assert.ok(srcHtml.includes('htmlWebpackPlugin.options.script'), 'src/index.html 必须注入 pxtransform 响应式脚本')
+
+  const distH5HtmlPath = path.resolve(__dirname, '../dist-h5/index.html')
+  if (fs.existsSync(distH5HtmlPath)) {
+    const distHtml = fs.readFileSync(distH5HtmlPath, 'utf8')
+    assert.ok(distHtml.includes('<div id="app"></div>'), 'dist-h5/index.html 必须包含挂载节点')
+    assert.ok(distHtml.includes('/js/app.js'), 'dist-h5/index.html 必须注入编译后的 /js/app.js')
+  }
+})
+
+
 console.log(`\n🎉 全部 ${passed} 项核心业务逻辑与合规断言验证通过！`)

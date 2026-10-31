@@ -1,6 +1,6 @@
 import { defineConfig } from '@tarojs/cli'
 
-export default defineConfig({
+export default defineConfig(async () => ({
   projectName: 'psy-assess-demo',
   date: '2026-10-12',
   designWidth: 750,
@@ -9,17 +9,21 @@ export default defineConfig({
   outputRoot: process.env.TARO_ENV === 'h5' ? 'dist-h5' : 'dist',
   plugins: ['@tarojs/plugin-framework-react'],
   framework: 'react',
-  compiler: 'webpack5',
+  compiler: {
+    type: 'webpack5',
+    prebundle: {
+      enable: false
+    }
+  },
   mini: { postcss: { pxtransform: { enable: true }, url: { enable: true }, cssModules: { enable: false } } },
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
-    template: 'src/templates/index.html',
     devServer: {
       hot: false
     },
     webpackChain(chain: any) {
       chain.performance.maxEntrypointSize(512000).maxAssetSize(512000)
     }
-  } as any
-})
+  }
+}))
